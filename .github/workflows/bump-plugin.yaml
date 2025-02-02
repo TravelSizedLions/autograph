@@ -1,11 +1,17 @@
-name: Bump plugin.cfg patch version
+name: Bump addons.jsonc patch version
 on:
   workflow_call:
 
 jobs:
   bump-version:
-    - name: bumping version
-      run: echo "$GITHUB_CONTEXT"
-      shell: bash
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
+    - name: Bump addons.jsonc patch version
+      runs-on: ubuntu-24.04
+      steps:
+        - name: ls
+          run: pwd && ls -a
+
+        - name: bump
+          run: echo "$GITHUB_CONTEXT"
+          shell: bash
+          env:
+            GITHUB_CONTEXT: ${{ toJson(github) }}
