@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://xl8um86m7wt7"]
+
+[ext_resource type="Theme" uid="uid://c0l35b1kopiyr" path="res://addons/autograph/renderers/property_renderers/string/string.theme.tres" id="1_kn65h"]
+
+[node name="string_property_renderer" type="VBoxContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_kn65h")
+
+[node name="property_name" type="Label" parent="."]
+layout_mode = 2
+text = "<value>"
+
+[node name="margin_container" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_top = 12
+
+[node name="line_edit" type="TextEdit" parent="margin_container"]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 2
+placeholder_text = "Add text here..."
+wrap_mode = 1

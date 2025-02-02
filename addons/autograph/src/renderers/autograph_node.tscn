@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://7hjrc8tl3ur1"]
+
+[ext_resource type="Theme" uid="uid://d1fmwld5fh18r" path="res://addons/autograph/autograph.theme.tres" id="1_b4133"]
+
+[node name="node" type="PanelContainer"]
+custom_minimum_size = Vector2(512, 256)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_b4133")
+
+[node name="properties" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="margin_container" type="MarginContainer" parent="properties"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 24
+
+[node name="__ag_node_name" type="Label" parent="properties/margin_container"]
+custom_minimum_size = Vector2(100, 20)
+layout_mode = 2
+mouse_filter = 1
+text = "<name>"
+vertical_alignment = 1

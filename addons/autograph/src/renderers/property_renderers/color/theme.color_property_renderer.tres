@@ -1,0 +1,73 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://b8b03o578jglq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5utmx"]
+border_width_left = 16
+border_width_top = 16
+border_width_right = 16
+border_width_bottom = 16
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sd2v4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ltmw"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.8, 0.8, 0.8, 0.784314)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j14ix"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.8, 0.8, 0.8, 0.784314)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk524"]
+content_margin_left = 32.0
+content_margin_top = 32.0
+content_margin_right = 32.0
+content_margin_bottom = 32.0
+bg_color = Color(0, 0, 0, 0.25098)
+border_color = Color(0.8, 0.8, 0.8, 0.784314)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="SystemFont" id="SystemFont_44t7u"]
+font_names = PackedStringArray("Arial Rounded MT")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oopxx"]
+content_margin_right = 8.0
+
+[resource]
+ColorPicker/styles/tab_selected = SubResource("StyleBoxFlat_5utmx")
+ColorPicker/styles/tab_unselected = SubResource("StyleBoxFlat_sd2v4")
+ColorPickerButton/styles/focus = SubResource("StyleBoxFlat_3ltmw")
+ColorPickerButton/styles/hover = SubResource("StyleBoxFlat_j14ix")
+ColorPickerButton/styles/normal = SubResource("StyleBoxFlat_sk524")
+Label/font_sizes/font_size = 24
+Label/fonts/font = SubResource("SystemFont_44t7u")
+Label/styles/normal = SubResource("StyleBoxEmpty_oopxx")

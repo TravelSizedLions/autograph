@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bql7y4dbkrttw"]
+
+[ext_resource type="Theme" uid="uid://d1fmwld5fh18r" path="res://addons/autograph/src/autograph.theme.tres" id="1_nrvmx"]
+[ext_resource type="Texture2D" uid="uid://bgdnmagf1mwvi" path="res://addons/autograph/src/blank.png" id="1_uch2y"]
+[ext_resource type="Script" path="res://addons/autograph/src/renderers/autograph_grid_renderer.gd" id="2_ecvmh"]
+[ext_resource type="Script" path="res://addons/autograph/src/autograph_window.gd" id="3_h4ef6"]
+[ext_resource type="Script" path="res://addons/autograph/src/renderers/autograph_background_renderer.gd" id="3_o0mre"]
+[ext_resource type="Script" path="res://addons/autograph/src/renderers/autograph_renderer.gd" id="4_f1kyl"]
+[ext_resource type="PackedScene" uid="uid://7hjrc8tl3ur1" path="res://addons/autograph/src/renderers/autograph_node.tscn" id="7_41iyd"]
+
+[node name="autograph_window" type="Control"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("1_nrvmx")
+script = ExtResource("3_h4ef6")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.0212576, 0.122231, 0.143489, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uch2y")
+script = ExtResource("3_o0mre")
+
+[node name="grid_renderer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("2_ecvmh")
+
+[node name="autograph_renderer" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -3002.0
+offset_top = -1860.0
+offset_right = -3002.0
+offset_bottom = -1860.0
+scale = Vector2(0.25, 0.25)
+script = ExtResource("4_f1kyl")
+
+[node name="node" parent="autograph_renderer" instance=ExtResource("7_41iyd")]
+visible = false
+layout_mode = 0

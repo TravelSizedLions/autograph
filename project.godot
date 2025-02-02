@@ -1,0 +1,24 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="autograph"
+run/main_scene="uid://ca5osocn3fov8"
+config/features=PackedStringArray("4.4", "Forward Plus")
+
+[autoload]
+
+TreeAccess="*res://addons/tree-access/src/tree_access.gd"
+InputListener="*res://addons/gdlib-editorinput/src/input_listener.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/autograph/plugin.cfg", "res://addons/contextual/plugin.cfg", "res://addons/gdlib-editorinput/plugin.cfg", "res://addons/tree-access/plugin.cfg")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkqilio1mgvgi"]
+
+[ext_resource type="Theme" uid="uid://b8b03o578jglq" path="res://addons/autograph/renderers/property_renderers/color/theme.color_property_renderer.tres" id="1_qlf43"]
+
+[node name="color_property_renderer" type="VBoxContainer"]
+offset_right = 400.0
+offset_bottom = 479.0
+theme = ExtResource("1_qlf43")
+
+[node name="name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 64
+text = "<value>"
+
+[node name="color_picker_button" type="ColorPickerButton" parent="."]
+custom_minimum_size = Vector2(600, 600)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="hex" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 64
+text = "<value>"

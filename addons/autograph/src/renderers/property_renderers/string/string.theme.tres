@@ -1,0 +1,86 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://c0l35b1kopiyr"]
+
+[ext_resource type="StyleBox" uid="uid://0ye74580rays" path="res://addons/autograph/renderers/property_renderers/string/text_entry_normal.stylebox.tres" id="1_hyp5n"]
+[ext_resource type="StyleBox" uid="uid://cn8hbnvjg0ywq" path="res://addons/autograph/renderers/property_renderers/string/text_entry_focused.stylebox.tres" id="1_t12or"]
+
+[sub_resource type="SystemFont" id="SystemFont_0ulhw"]
+font_names = PackedStringArray("Arial Rounded MT", "Arial")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xwfjb"]
+bg_color = Color(0, 0, 0, 0.282353)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ma06c"]
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.392157)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ef3nw"]
+content_margin_bottom = 20.0
+bg_color = Color(0, 0, 0, 0.313726)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 16
+border_color = Color(0, 0, 0, 0.501961)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pej8"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 8
+border_color = Color(0, 0, 0, 0.705882)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="SystemFont" id="SystemFont_e7aon"]
+font_names = PackedStringArray("Arial Rounded MT", "Arial")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6eqyy"]
+
+[sub_resource type="SystemFont" id="SystemFont_hrpbk"]
+font_names = PackedStringArray("Arial Rounded MT", "Arial")
+
+[sub_resource type="SystemFont" id="SystemFont_hp62c"]
+font_names = PackedStringArray("Arial Rounded MT", "Arial")
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = SubResource("SystemFont_0ulhw")
+Button/styles/focus = SubResource("StyleBoxFlat_xwfjb")
+Button/styles/hover = SubResource("StyleBoxFlat_ma06c")
+Button/styles/normal = SubResource("StyleBoxFlat_ef3nw")
+Button/styles/pressed = SubResource("StyleBoxFlat_3pej8")
+Label/font_sizes/font_size = 64
+Label/fonts/font = SubResource("SystemFont_e7aon")
+Label/styles/normal = SubResource("StyleBoxEmpty_6eqyy")
+LineEdit/constants/caret_width = 5
+LineEdit/font_sizes/font_size = 40
+LineEdit/fonts/font = SubResource("SystemFont_hrpbk")
+LineEdit/styles/focus = ExtResource("1_t12or")
+LineEdit/styles/normal = ExtResource("1_hyp5n")
+TextEdit/font_sizes/font_size = 40
+TextEdit/fonts/font = SubResource("SystemFont_hp62c")
+TextEdit/styles/focus = ExtResource("1_t12or")
+TextEdit/styles/normal = ExtResource("1_hyp5n")

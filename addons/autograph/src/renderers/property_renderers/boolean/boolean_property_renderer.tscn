@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqpytsgw8mdwp"]
+
+[ext_resource type="Theme" uid="uid://bmqhjip70judb" path="res://addons/autograph/renderers/property_renderers/boolean/boolean_hover.theme.tres" id="1_4ja6x"]
+[ext_resource type="Theme" uid="uid://bwt6cqwqkwt6s" path="res://addons/autograph/renderers/property_renderers/boolean/boolean.theme.tres" id="1_5t4j8"]
+
+[node name="boolean_property_renderer" type="PanelContainer"]
+offset_right = 428.0
+offset_bottom = 176.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_4ja6x")
+
+[node name="h_box_container" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme = ExtResource("1_5t4j8")
+
+[node name="margin_container" type="MarginContainer" parent="h_box_container"]
+layout_mode = 2
+theme_override_constants/margin_right = 24
+
+[node name="panel_container" type="PanelContainer" parent="h_box_container/margin_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+
+[node name="button" type="Button" parent="h_box_container/margin_container/panel_container"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+toggle_mode = true
+
+[node name="label" type="Label" parent="h_box_container"]
+layout_mode = 2
+mouse_filter = 1
+text = "<value>"

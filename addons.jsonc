@@ -1,0 +1,15 @@
+{
+  "$schema": "https://chickensoft.games/schemas/addons.schema.json",
+  "name": "autograph",
+  "description": "Godot redefined.",
+  "version": "0.0.0",
+  "cache": "../.addons",
+  "addons": {
+    "contextual": {
+      "url": "https://github.com/TravelSizedLions/contextual.git",
+      "subfolder": "addons/contextual",
+      "checkout": "dev",
+      "source": "remote"
+    }
+  }
+}
