@@ -1,0 +1,23 @@
+name: Build Dev Branch
+run-name: 'Build Dev: ${{github.sha}}'
+on:
+  pull_request:
+    branches: ["dev"]
+
+jobs:
+  Run Tests:
+    id: run-tests
+    uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
+  
+  bump-addons-version:
+    name: Bump addons.json patch version
+    uses: ./bump-addons.yaml@dev
+
+  bump-plugin-version:
+    name: Bump plugin.cfg version
+    uses: ./bump-plugin.yaml@dev
+
+  verify:
+    steps:
+      - name: thing
+        run: cat ./addons.jsonc && cat ./addons/autograph/plugin.cfg
