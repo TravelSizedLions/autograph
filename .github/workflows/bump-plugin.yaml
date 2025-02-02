@@ -1,0 +1,11 @@
+name: Bump plugin.cfg patch version
+on:
+  workflow_call:
+
+jobs:
+  bump-version:
+    - name: bumping version
+      run: echo "$GITHUB_CONTEXT"
+      shell: bash
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}

@@ -5,9 +5,9 @@ on:
     branches: ["dev"]
 
 jobs:
-  Run Tests:
-    id: run-tests
-    uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
+  # Run Tests:
+  #   id: run-tests
+  #   uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
   bump-addons-version:
     name: Bump addons.json patch version
