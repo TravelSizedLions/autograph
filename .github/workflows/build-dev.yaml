@@ -10,12 +10,12 @@ jobs:
   #   uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
   bump-addons-version:
-    name: Bump addons.json patch version
+    name: "Bump addons.json patch version"
     uses: ./.github/workflows/bump-addons.yaml@dev
 
-  bump-plugin-version:
-    name: Bump plugin.cfg version
-    uses: ./.github/workflows/bump-plugin.yaml@dev
+  # bump-plugin-version:
+  #   name: Bump plugin.cfg version
+  #   uses: ./.github/workflows/bump-plugin.yaml@dev
 
   verify:
     steps:
