@@ -8,8 +8,6 @@ patch_bump=$(echo $version | awk -F. '{$NF = $NF + 1;} 1' OFS=.)
 addons=$(echo $addons | jq --arg v $patch_bump '.version = $v')
 echo $addons | jq . > $file
 
-if [[ -n $GITHUB_OUTPUT ]]; then
-  echo "next_version=${version}" >> $GITHUB_OUTPUT
-fi
+echo "next_version=${version}" >> $GITHUB_OUTPUT
 
 echo "Bumped from $version to $patch_bump"
