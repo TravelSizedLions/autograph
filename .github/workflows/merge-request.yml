@@ -2,9 +2,9 @@ name: Merge Request
 run-name: '#${{github.event.pull_request.number}}: "${{github.event.pull_request.title}}" [${{github.actor}}]'
 on:
   pull_request:
-    branches: ["dev"]
+    branches: ["asdf"]
   push:
-    branches: ["dev"]
+    branches: ["asdf"]
 
 jobs:
   unit-tests:

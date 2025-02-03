@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: install dasel
-        run: apt install dasel -y
+        run: sudo apt-get install -y dasel
 
       - name: Change Permissions
         run: chmod +x ./scripts/version-bump-addons.sh && chmod +x ./scripts/version-bump-plugin.sh
