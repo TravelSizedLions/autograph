@@ -14,4 +14,4 @@ jobs:
         run: pwd && ls -a
 
       - name: bump
-        run: ./scripts/version-bump-addons.sh ${{ github.event.repository.name }}
+        run: chmod +x ./scripts/version-bump-addons.sh && ./scripts/version-bump-addons.sh ${{ github.event.repository.name }}
