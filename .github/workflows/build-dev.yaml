@@ -6,18 +6,18 @@ on:
       - dev
 
 env:
-  actions: TravelSizedLions/actions/.github/workflows
+  ACTIONS: TravelSizedLions/actions/.github/workflows
   
 jobs:
   dump:
     name: Inspect
-    uses: ${{env.actions}}/dump-vars.yaml@dev
+    uses: $ACTIONS/dump-vars.yaml@dev
 
   run-tests:
     name: Verify
-    uses: ${{env.actions}}/test-drive.yaml@dev
+    uses: $ACTIONS/test-drive.yaml@dev
   
   version-bump:
     name: Versioning
     needs: run-tests
-    uses: ${{env.actions}}/bump-patch.yaml@dev
+    uses: $ACTIONS/bump-patch.yaml@dev
