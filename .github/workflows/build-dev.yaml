@@ -10,7 +10,7 @@ jobs:
   #   uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
   bump-addons-version:
-    name: "Bump addons.json patch version"
+    name: Bump ${{ github.event.repository.name }} addons.json patch version
     uses: ./.github/workflows/bump-addons.yaml
 
   # bump-plugin-version:
