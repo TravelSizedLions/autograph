@@ -11,7 +11,7 @@ jobs:
   
   bump-versions:
     name: Bump ${{ github.event.repository.name }} addons.json patch version
-    uses: ./.github/workflows/bump-addons.yaml
+    uses: ./.github/workflows/bump-versions.yaml
 
   # bump-plugin-version:
   #   name: Bump plugin.cfg version
