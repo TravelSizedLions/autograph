@@ -6,10 +6,6 @@ on:
       - dev
   
 jobs:
-  dump:
-    name: Vars
-    uses: TravelSizedLions/actions/.github/workflows/dump-context.yaml@dev
-
   run-tests:
     name: Verify
     uses: TravelSizedLions/actions/.github/workflows/test-drive.yaml@dev
