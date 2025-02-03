@@ -23,9 +23,6 @@ jobs:
         run: ./scripts/version-bump-plugin.sh ${{ github.event.repository.name }}
 
       - name: Tag
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "Github Action"
-          git add .
-          git commit -m "Bump version"
-          git tag -f -a "v$(cat ./addons.jsonc | jq '.version')"
+        run: | 
+          git commit -am "Bump version"
+          git push
