@@ -18,6 +18,9 @@ jobs:
   #   uses: ./.github/workflows/bump-plugin.yaml
 
   verify:
+    name: Verify
+    needs: bump-addons-version
+    runs-on: ubuntu-24.04
     steps:
       - name: thing
         run: cat ./addons.jsonc && cat ./addons/autograph/plugin.cfg
