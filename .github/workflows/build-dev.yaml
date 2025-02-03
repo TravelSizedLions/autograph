@@ -8,7 +8,7 @@ on:
 jobs:
   dump:
     name: Inspect
-    uses: TravelSizedLions/actions/.github/workflows/dump-vars.yaml@dev
+    uses: TravelSizedLions/actions/.github/workflows/dump-context.yaml@dev
 
   run-tests:
     name: Verify
