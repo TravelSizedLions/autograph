@@ -1,10 +1,10 @@
-name: Bump patch version
+name: Bump Patch Version
 on:
   workflow_call:
 
 jobs:
   bump-version:
-    name: Bump patch version
+    name: Perform Bump
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
@@ -14,17 +14,14 @@ jobs:
         run: sudo apt-get install -y dasel
 
       - name: Change Permissions
-        run: chmod +x ./scripts/version-bump-addons.sh && chmod +x ./scripts/version-bump-plugin.sh
+        run: chmod +x ./scripts/bump-version.sh
 
-      - name: Bump addons
+      - name: Bump version
         id: bump
-        run: ./scripts/version-bump-addons.sh ${{ github.event.repository.name }}
-
-      - name: Bump plugin
-        run: ./scripts/version-bump-plugin.sh ${{ github.event.repository.name }}
+        run: ./scripts/bump-version.sh ${{ github.event.repository.name }}
 
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Bump version"
+          commit_message: "v${{ steps.bump.outputs.next_version }}"
           tagging_message: "v${{ steps.bump.outputs.next_version }}"
