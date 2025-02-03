@@ -5,10 +5,11 @@ on:
     branches: ["dev"]
 
 jobs:
-  Run Tests:
-    id: run-tests
+  run-tests:
+    name: Run Tests
     uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
-  Bump Patch Version:
+  version-bump:
+    name: Bump Patch
     needs: run-tests
     uses: ./.github/workflows/bump-versions.yaml
