@@ -10,7 +10,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: install dasel
+      - name: Pull
+        run: |
+          git config user.email "travelsizedlions@gmail.com"
+          git config user.name "lions"
+          git pull
+
+      - name: Install dasel
         run: sudo apt-get install -y dasel
 
       - name: Change Permissions
@@ -24,7 +30,5 @@ jobs:
 
       - name: Tag
         run: | 
-          git config user.email "travelsizedlions@gmail.com"
-          git config user.name "lions"
           git commit -am "Bump version"
           git push origin HEAD:${{ github.head_ref }}
