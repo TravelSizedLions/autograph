@@ -5,9 +5,13 @@ on:
     branches: ["dev"]
 
 jobs:
-  run-tests:
-    name: Verify
-    uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
+  dump:
+    name: Inspect
+    uses: ./.github/workflows/dump-vars.yaml
+
+  # run-tests:
+  #   name: Verify
+  #   uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
   version-bump:
     name: Versioning

@@ -1,0 +1,11 @@
+name: Dump Github Env
+on:
+  workflow_call:
+
+jobs:
+  dump:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Dump Github Vars
+        shell: bash
+        run: echo "${{ toJson(github) }}"
