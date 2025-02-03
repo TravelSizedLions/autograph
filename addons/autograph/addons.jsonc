@@ -2,7 +2,7 @@
   "$schema": "https://chickensoft.games/schemas/addons.schema.json",
   "name": "autograph",
   "description": "Godot graphs redefined",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "cache": "../.addons",
   "addons": {
     "contextual": {
