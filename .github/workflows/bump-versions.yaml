@@ -4,7 +4,7 @@ on:
 
 jobs:
   bump-version:
-    name: Perform Bump
+    name: Bump Patch Version
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout

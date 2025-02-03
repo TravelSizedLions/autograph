@@ -1,15 +1,15 @@
 name: Build Dev Branch
-run-name: 'Build Dev: ${{github.sha}}'
+run-name: '[build] "${{ github.event.head_commit.message }}"
 on:
   pull_request:
     branches: ["dev"]
 
 jobs:
   run-tests:
-    name: Run Tests
+    name: Verify
     uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
   version-bump:
-    name: Bump Patch
+    name: Versioning
     needs: run-tests
     uses: ./.github/workflows/bump-versions.yaml
