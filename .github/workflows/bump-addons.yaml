@@ -7,6 +7,9 @@ jobs:
     name: Bump addons.jsonc patch version
     runs-on: ubuntu-24.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: ls
         run: pwd && ls -a
 
