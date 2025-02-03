@@ -10,13 +10,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Pull
-        run: |
-          git config user.email "travelsizedlions@gmail.com"
-          git config user.name "lions"
-          git pull origin ${{ github.head_ref }}
-          git checkout origin/${{ github.head_ref }}
-
       - name: Install dasel
         run: sudo apt-get install -y dasel
 
@@ -29,7 +22,8 @@ jobs:
       - name: Bump plugin
         run: ./scripts/version-bump-plugin.sh ${{ github.event.repository.name }}
 
-      - name: Tag
-        run: | 
-          git commit -am "Bump version"
-          git push origin HEAD:${{ github.head_ref }}
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Bump version"
+          tagging_message: "v$NEXT_VERSION"
