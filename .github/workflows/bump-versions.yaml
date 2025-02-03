@@ -24,5 +24,7 @@ jobs:
 
       - name: Tag
         run: | 
+          git config user.email "travelsizedlions@gmail.com"
+          git config user.name "lions"
           git commit -am "Bump version"
           git push
