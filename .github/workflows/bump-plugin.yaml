@@ -4,14 +4,14 @@ on:
 
 jobs:
   bump-version:
-    - name: Bump addons.jsonc patch version
-      runs-on: ubuntu-24.04
-      steps:
-        - name: ls
-          run: pwd && ls -a
+    name: Bump addons.jsonc patch version
+    runs-on: ubuntu-24.04
+    steps:
+      - name: ls
+        run: pwd && ls -a
 
-        - name: bump
-          run: echo "$GITHUB_CONTEXT"
-          shell: bash
-          env:
-            GITHUB_CONTEXT: ${{ toJson(github) }}
+      - name: bump
+        run: echo "$GITHUB_CONTEXT"
+        shell: bash
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
