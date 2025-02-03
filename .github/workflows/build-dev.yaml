@@ -1,20 +1,16 @@
 name: Build Dev Branch
 run-name: '[build] "${{ github.event.head_commit.message }}"'
 on:
-  pull_request:
+  push:
     branches:
       - dev
   
 jobs:
-  # dump:
-  #   name: Inspect
-  #   uses: TravelSizedLions/actions/.github/workflows/dump-context.yaml@dev
-
-  # run-tests:
-  #   name: Verify
-  #   uses: TravelSizedLions/actions/.github/workflows/test-drive.yaml@dev
+  run-tests:
+    name: Verify
+    uses: TravelSizedLions/actions/.github/workflows/test-drive.yaml@dev
   
   version-bump:
     name: Versioning
-    # needs: run-tests
+    needs: run-tests
     uses: TravelSizedLions/actions/.github/workflows/bump-patch.yaml@dev
