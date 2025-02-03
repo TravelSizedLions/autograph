@@ -9,18 +9,10 @@ jobs:
   #   id: run-tests
   #   uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
   
-  bump-addons-version:
+  bump-versions:
     name: Bump ${{ github.event.repository.name }} addons.json patch version
     uses: ./.github/workflows/bump-addons.yaml
 
   # bump-plugin-version:
   #   name: Bump plugin.cfg version
   #   uses: ./.github/workflows/bump-plugin.yaml
-
-  verify:
-    name: Verify
-    needs: bump-addons-version
-    runs-on: ubuntu-24.04
-    steps:
-      - name: thing
-        run: cat ./addons.jsonc && cat ./addons/autograph/plugin.cfg

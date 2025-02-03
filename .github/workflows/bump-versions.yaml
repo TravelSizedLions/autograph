@@ -1,0 +1,28 @@
+name: Bump patch version
+on:
+  workflow_call:
+
+jobs:
+  bump-version:
+    name: Bump patch version
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Change Permissions
+        run: chmod +x ./scripts/version-bump-addons.sh && chmod +x ./scripts/version-bump-plugin.sh
+
+      - name: Bump addons
+        run: ./scripts/version-bump-addons.sh ${{ github.event.repository.name }}
+
+      - name: Bump plugin
+        run: ./scripts/version-bump-plugin.sh ${{ github.event.repository.name }}
+
+      - name: Tag
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Github Action"
+          git add .
+          git commit -m "Bump version"
+          git tag -f -a "v$(cat ./addons.jsonc | jq '.version')"
