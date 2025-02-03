@@ -1,4 +1,4 @@
-name: Dump Github Env
+name: Github Environment
 on:
   workflow_call:
 
@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Dump Github Vars
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github)}}
         shell: bash
-        run: echo "${{ toJson(github) }}"
+        run: echo "${GITHUB_CONTEXT}"
