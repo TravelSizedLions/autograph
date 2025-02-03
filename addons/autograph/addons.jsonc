@@ -8,13 +8,13 @@
     "contextual": {
       "url": "https://github.com/TravelSizedLions/contextual.git",
       "subfolder": "addons/contextual",
-      "checkout": "dev",
+      "checkout": "v0.0.2",
       "source": "remote"
     },
     "test-drive": {
       "url": "https://github.com/TravelSizedLions/test-drive.git",
       "subfolder": "addons/test-drive",
-      "checkout": "dev",
+      "checkout": "v0.0.3",
       "source": "remote"
     }
   }
