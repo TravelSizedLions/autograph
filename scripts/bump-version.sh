@@ -51,6 +51,6 @@ if [[ -e "$cfg_path" ]]; then
 fi
 
 if [[ -n $GITHUB_OUTPUT ]]; then
-  echo "exporting version info: ${next_version}"
+  echo "Exporting version info: ${next_version}"
   echo "next_version=${next_version}" >> $GITHUB_OUTPUT
 fi
