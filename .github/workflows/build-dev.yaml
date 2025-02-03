@@ -2,18 +2,22 @@ name: Build Dev Branch
 run-name: '[build] "${{ github.event.head_commit.message }}"'
 on:
   pull_request:
-    branches: ["dev"]
+    branches:
+      - dev
 
+env:
+  actions: TravelSizedLions/actions/.github/workflows
+  
 jobs:
   dump:
     name: Inspect
-    uses: ./.github/workflows/dump-vars.yaml
+    uses: ${{env.actions}}/dump-vars.yaml@dev
 
   run-tests:
     name: Verify
-    uses: TravelSizedLions/actions/.github/workflows/merge-request.yaml@dev
+    uses: ${{env.actions}}/test-drive.yaml@dev
   
   version-bump:
     name: Versioning
     needs: run-tests
-    uses: ./.github/workflows/bump-versions.yaml
+    uses: ${{env.actions}}/bump-patch.yaml@dev
