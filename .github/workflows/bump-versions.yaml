@@ -14,6 +14,7 @@ jobs:
         run: |
           git config user.email "travelsizedlions@gmail.com"
           git config user.name "lions"
+          git pull origin ${{ github.head_ref }}
           git checkout origin/${{ github.head_ref }}
 
       - name: Install dasel
