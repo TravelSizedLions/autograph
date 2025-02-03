@@ -4,20 +4,17 @@ on:
   pull_request:
     branches:
       - dev
-
-env:
-  ACTIONS: TravelSizedLions/actions/.github/workflows
   
 jobs:
   dump:
     name: Inspect
-    uses: $ACTIONS/dump-vars.yaml@dev
+    uses: TravelSizedLions/actions/.github/workflows/dump-vars.yaml@dev
 
   run-tests:
     name: Verify
-    uses: $ACTIONS/test-drive.yaml@dev
+    uses: TravelSizedLions/actions/.github/workflows/test-drive.yaml@dev
   
   version-bump:
     name: Versioning
     needs: run-tests
-    uses: $ACTIONS/bump-patch.yaml@dev
+    uses: TravelSizedLions/actions/.github/workflows/bump-patch.yaml@dev
