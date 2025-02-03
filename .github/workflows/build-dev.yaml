@@ -11,11 +11,11 @@ jobs:
   
   bump-addons-version:
     name: "Bump addons.json patch version"
-    uses: ./.github/workflows/bump-addons.yaml@dev
+    uses: ./.github/workflows/bump-addons.yaml
 
   # bump-plugin-version:
   #   name: Bump plugin.cfg version
-  #   uses: ./.github/workflows/bump-plugin.yaml@dev
+  #   uses: ./.github/workflows/bump-plugin.yaml
 
   verify:
     steps:
